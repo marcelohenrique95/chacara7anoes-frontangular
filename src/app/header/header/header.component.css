@@ -1,0 +1,15 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.h5 {
+  background-color: rgb(124, 1, 1);
+
+}
+
+
+.textFooter {
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}

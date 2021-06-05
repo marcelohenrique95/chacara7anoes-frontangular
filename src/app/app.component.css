@@ -1,0 +1,86 @@
+.example-card {
+  max-width: 370px;
+  margin: 25px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.cardbutton {
+  margin-left: 30%;
+}
+
+.labelpromo{
+  text-align: center;
+  font-size: 30px;
+  margin: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.stylebutton {
+  flex: 1;
+
+}
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+
+.tab {
+  display: flex;
+  align-items: center;
+  margin: 125px;
+  align-content: center;
+  background-color: rgb(247, 177, 177);
+  border-radius: 15px;
+}
+
+.example-form-field {
+  margin: 0 8px 16px 0;
+}
+
+.example-form {
+  width:100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+.divcota {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  background-color: rgb(247, 177, 177);
+  height: 100%;
+  width: 100%;
+}
+
+.cota-card {
+  margin: 10px;
+  height: 90%;
+  width: 100%;
+}
+.tabphotos {
+  background-color: #000;
+}
+
+.divphotos {
+  max-width: 400px;
+}
+.gridlist {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.accord {
+  margin-bottom: 5px;
+}
