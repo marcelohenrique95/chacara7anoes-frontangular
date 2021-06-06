@@ -6,13 +6,13 @@
 }
 
 .cardbutton {
-  margin-left: 30%;
+  margin-left: 25%;
 }
 
 .labelpromo{
   text-align: center;
   font-size: 30px;
-  margin: 25px;
+  margin: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -33,10 +33,25 @@
 .tab {
   display: flex;
   align-items: center;
-  margin: 125px;
+  margin: auto;
+  margin-top: 15px;
+  flex-direction: row;
+  justify-content: center;
   align-content: center;
   background-color: rgb(247, 177, 177);
-  border-radius: 15px;
+  border-radius: 18px;
+  max-width: 70%;
+}
+
+.tabcota {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 18px;
+  max-width: 90%;
+  background-color: rgb(247, 177, 177);
+
 }
 
 .example-form-field {
@@ -45,35 +60,58 @@
 
 .example-form {
   width:100%;
+  align-items: center;
 }
 
 .example-full-width {
   width: 100%;
 }
 
+.formcotacao {
+  width: 45%;
+  align-items: center;
+}
+.buttonform{
+  align-items: center;
+  width: 120px;
+
+}
+
 td {
   padding-right: 8px;
 }
 .divcota {
-  display: flex;
   align-items: center;
-  margin: 15px;
+  margin: auto;
   background-color: rgb(247, 177, 177);
-  height: 100%;
-  width: 100%;
+
 }
 
 .cota-card {
-  margin: 10px;
-  height: 90%;
+  height: 100%;
+  width: 95%;
+}
+.cota-card2 {
+  height: 100%;
   width: 100%;
 }
 .tabphotos {
   background-color: #000;
 }
 
-.divphotos {
-  max-width: 400px;
+.divtab {
+ display: flex;
+}
+
+.divbutton {
+  align-items: center;
+  margin: auto;
+  padding: 15px;
+}
+.loren{
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 .gridlist {
   background-color: #000;
@@ -81,6 +119,11 @@ td {
   height: 100%;
 }
 
+.imag {
+  width: 100%;
+  height: 100%;
+}
+
 .accord {
-  margin-bottom: 5px;
+  padding: 15px;
 }
