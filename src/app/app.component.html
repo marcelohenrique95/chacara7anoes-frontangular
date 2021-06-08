@@ -1,3 +1,8 @@
+<div *ngIf="showMsg">
+  <mat-card class="cardNotfy">
+    <mat-label class="showMsg">Reserva efetuada !!!</mat-label>
+  </mat-card>
+</div>
 <app-header></app-header>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Promoções">
@@ -18,9 +23,10 @@
           </p>
         </mat-card-content>
         <mat-card-actions class="cardbutton">
-          <button mat-raised-button color="warn">RESERVAR AGORA</button>
+          <button mat-raised-button color="warn" (click)="reserve()">RESERVAR AGORA</button>
         </mat-card-actions>
       </mat-card>
+      
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title>RÉVEILLON 2021</mat-card-title>
@@ -50,7 +56,6 @@
         </mat-card-actions>
       </mat-card>
     </div>
-
   </mat-tab>
   <mat-tab label="Cotação">
     <div class="divtab">
@@ -162,8 +167,18 @@
   </mat-tab>
   <mat-tab label="Contato">
     <mat-grid-list cols="2" rowHeight="1:1">
-      <mat-grid-tile>1</mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>
+        <mat-label>@marcelohenrique95 GITHUB</mat-label>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-list>
+          <mat-list-item>Item 1</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 2</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 3</mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
     </mat-grid-list>
   </mat-tab>
 </mat-tab-group>

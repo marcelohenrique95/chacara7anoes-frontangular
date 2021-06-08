@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     MatGridListModule,
     MatProgressBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatListModule
 
 
   ],

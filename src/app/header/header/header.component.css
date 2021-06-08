@@ -6,10 +6,13 @@
   background-color: rgb(124, 1, 1);
 
 }
-
+.titlechac {
+  text-align: center;
+}
 
 .textFooter {
   color: #fff;
   text-align: center;
-  margin: 15px;
+  margin: 350px;
+  padding: 205px;
 }

@@ -6,7 +6,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+  showMsg: boolean = false;
   title = 'chacara-angular';
   panelOpenState = false;
   range = new FormGroup({
@@ -23,4 +25,9 @@ export class AppComponent {
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
+
+  reserve(){
+    this.showMsg = true;
+  }
+
 }

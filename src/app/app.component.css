@@ -127,3 +127,18 @@ td {
 .accord {
   padding: 15px;
 }
+
+.showMsg {
+  font-size: large;
+  color: red;
+  background-color: #000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cardNotfy {
+ flex: 1;
+ width: 20%;
+ height: 45%;
+ background-color:#fff;
+}
