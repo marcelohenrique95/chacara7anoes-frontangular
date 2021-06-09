@@ -1,6 +1,6 @@
 # ChacaraAngular
 
-Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0 + Angular Material 12.0.3
 
 ## Desenvolvimento
 
