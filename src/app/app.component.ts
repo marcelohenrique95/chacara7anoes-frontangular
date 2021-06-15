@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 
 export class AppComponent {
+  isChecked= true;
   showMsg: boolean = false;
   title = 'chacara-angular';
   panelOpenState = false;

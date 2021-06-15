@@ -4,6 +4,9 @@
   border-radius: 15px;
   align-items: center;
 }
+.tab-home{
+  background-color:  rgb(247, 177, 177);
+}
 
 .cardbutton {
   margin-left: 25%;
@@ -29,7 +32,23 @@
   margin-left: 8px;
 }
 
+.divselect{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  align-items: center;
+}
 
+.mat-select {
+  border-bottom: 15px;
+  border-radius: 20px;
+  border-width: 15px;
+}
+
+.select {
+  border-radius: 55px;
+
+}
 .tab {
   display: flex;
   align-items: center;
@@ -40,7 +59,7 @@
   align-content: center;
   background-color: rgb(247, 177, 177);
   border-radius: 18px;
-  max-width: 70%;
+  max-width: 75%;
 }
 
 .tabcota {
@@ -52,6 +71,9 @@
   max-width: 90%;
   background-color: rgb(247, 177, 177);
 
+}
+.label-price{
+  margin-left: 180px;
 }
 
 .example-form-field {
@@ -73,18 +95,31 @@
 }
 .buttonform{
   align-items: center;
-  width: 120px;
+  width: 150px;
+  height: 40px;
 
+}
+
+.select-panel {
+  background: rgba(255, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 td {
   padding-right: 8px;
 }
-.divcota {
+.title-cota{
   align-items: center;
+  text-align: center;
   margin: auto;
+  margin-bottom: 5px;
+}
+.divcota {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
   background-color: rgb(247, 177, 177);
-
 }
 
 .cota-card {
@@ -92,8 +127,9 @@ td {
   width: 95%;
 }
 .cota-card2 {
-  height: 100%;
-  width: 100%;
+  align-items: center;
+  height: 80%;
+  width: 80%;
 }
 .tabphotos {
   background-color: #000;
@@ -101,18 +137,14 @@ td {
 
 .divtab {
  display: flex;
+ align-items: center;
 }
 
 .divbutton {
-  align-items: center;
-  margin: auto;
+  margin: 0 auto;
   padding: 15px;
 }
-.loren{
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
+
 .gridlist {
   background-color: #000;
   width: 100%;
