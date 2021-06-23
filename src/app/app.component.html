@@ -32,7 +32,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions class="cardbutton">
-          <button  mat-raised-button color="warn">RESERVAR AGORA</button>
+          <button mat-raised-button color="warn">RESERVAR AGORA</button>
         </mat-card-actions>
       </mat-card>
       <mat-card class="example-card">
@@ -53,7 +53,8 @@
     <app-footer></app-footer>
   </mat-tab>
   <mat-tab label="Cotação">
-    <div class="divcota">
+    <form action="javascript:" [formGroup]="reservaForm" (ngSubmit)="reserve()">
+      <div class="divcota">
         <mat-card class="cota-card2">
           <mat-card-header class="title-cota">
             <mat-card-title class="title-cota">Simule o valor do aluguel</mat-card-title>
@@ -62,76 +63,72 @@
           <div class="divselect">
             <mat-form-field appearance="fill" class="mat-select">
               <mat-label>Tipo de evento</mat-label>
-              <mat-select panelClass="select-panel">
-                <mat-option value="0"></mat-option>
+              <mat-select panelClass="select-panel" formControlName="inputTypeEvent">
                 <mat-option value="1">Aniversário</mat-option>
                 <mat-option value="2">Retiro</mat-option>
-                <mat-option value="3">Chá de bebê</mat-option>
-                <mat-option value="4">Casamento</mat-option>
-                <mat-option value="4">Outro</mat-option>
+                <mat-option value="1">Chá de bebê</mat-option>
+                <mat-option value="2">Casamento</mat-option>
+                <mat-option value="0">Outro</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field appearance="fill" class="mat-select">
               <mat-label>Quantidade de convidados</mat-label>
-              <mat-select panelClass="select-panel">
+              <mat-select panelClass="select-panel" formControlName="inputConv">
                 <mat-option value="0"></mat-option>
-                <mat-option value="1">Até 10 conv.</mat-option>
-                <mat-option value="2">Até 30 conv.</mat-option>
-                <mat-option value="3">Até 50 conv.</mat-option>
-                <mat-option value="4">Acima de 50</mat-option>
+                <mat-option value="10">Até 10 conv.</mat-option>
+                <mat-option value="30">Até 30 conv.</mat-option>
+                <mat-option value="50">Até 50 conv.</mat-option>
+                <mat-option value="90">Acima de 50</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
           <div class="divselect">
             <mat-form-field appearance="fill" class="mat-select">
               <mat-label>Dia do evento</mat-label>
-              <mat-select panelClass="select-panel">
-                <mat-option value="1">Sexta-Feira</mat-option>
-                <mat-option value="2">Sábado</mat-option>
-                <mat-option value="3">Domingo</mat-option>
-                <mat-option value="5">Sábado e Domingo</mat-option>
-                <mat-option value="4">Feriado</mat-option>
-                <mat-option value="5">Outro dia da semana</mat-option>
+              <mat-select panelClass="select-panel" formControlName="inputDay">
+                <mat-option value="sex">Sexta-Feira</mat-option>
+                <mat-option value="sab">Sábado</mat-option>
+                <mat-option value="dom">Domingo</mat-option>
+                <mat-option value="sabdom">Sábado e Domingo</mat-option>
+                <mat-option value="fer">Feriado</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field appearance="fill" class="mat-select">
               <mat-label>Horário do evento</mat-label>
-              <mat-select panelClass="select-panel">
-                <mat-option value="1">08h as 20h</mat-option>
-                <mat-option value="2">18h as 06h</mat-option>
-                <mat-option value="3">12h as 00h</mat-option>
-                <mat-option value="4">25</mat-option>
-                <mat-option value="4">08</mat-option>
+              <mat-select panelClass="select-panel" formControlName="inputHour">
+                <mat-option value=1>08h as 20h</mat-option>
+                <mat-option value=2>18h as 06h</mat-option>
+                <mat-option value=3>12h as 00h</mat-option>
+                <mat-option *ngIf="inputDay == sabdom" value=4>2 dias</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
-            <div>
-              <mat-slide-toggle
-               [(ngModel)]="isChecked"
-               >
-               Adicionar +10 jogos de mesas.
-              </mat-slide-toggle>
-              
-            </div>
-            <mat-divider></mat-divider>
-            <div class="divbutton">
-              <button class="buttonform" mat-raised-button color="warn">Simular</button>
-              <mat-label class="label-price"><b>O VALOR DO SEU EVENTO SERÁ R$</b> </mat-label>
-            </div>
+          <div>
+            <mat-slide-toggle [(ngModel)]="isChecked" formControlName="inputTableGame" (change)="handleChange(true)">
+              Adicionar +10 jogos de mesas.
+            </mat-slide-toggle>
+
+          </div>
+          <mat-divider></mat-divider>
+          <div class="divbutton">
+            <button type="submit" class="buttonform" mat-raised-button color="warn">Simular</button>
+            <mat-label class="label-price"><b>O VALOR DO SEU EVENTO SERÁ R$</b> </mat-label>
+          </div>
         </mat-card>
-    </div>
+      </div>
+    </form>
     <app-footer></app-footer>
   </mat-tab>
   <mat-tab label="Fotos" class="tabphotos">
-  <div class="divtab">
-    <div class="loren">
-      <img class="imag" src="./../assets/images/chac-night.jpg"/>
+    <div class="divtab">
+      <div class="loren">
+        <img class="imag" src="./../assets/images/chac-night.jpg" />
+      </div>
+      <div class="loren">
+        <img class="imag" src="./../assets/images/chacara-piscina.jfif" />
+      </div>
     </div>
-    <div class="loren">
-      <img class="imag" src="./../assets/images/chacara-piscina.jfif"/>
-    </div>
-  </div>
-  <app-footer></app-footer>
+    <app-footer></app-footer>
   </mat-tab>
   <mat-tab label="Contato">
     <mat-grid-list cols="2" rowHeight="1:1">
@@ -151,4 +148,3 @@
     <app-footer></app-footer>
   </mat-tab>
 </mat-tab-group>
-
