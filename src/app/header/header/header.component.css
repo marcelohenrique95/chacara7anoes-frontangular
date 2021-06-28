@@ -4,15 +4,14 @@
 
 .h5 {
   background-color: rgb(124, 1, 1);
-
+  width: 100%;
 }
 .titlechac {
   text-align: center;
 }
 
-.textFooter {
+.textHeader {
   color: #fff;
-  text-align: center;
-  margin: 350px;
-  padding: 205px;
+  margin: 0 auto;
+  margin-top: 10px;
 }

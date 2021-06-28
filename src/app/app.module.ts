@@ -25,14 +25,19 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
-import { ReservaComponent } from './reserva/reserva.component';
+import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { PhotoComponent } from './screen/photo/photo.component';
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+import { ListComponent } from './screen/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    ReservaComponent
+    PhotoComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +62,16 @@ import { ReservaComponent } from './reserva/reserva.component';
     MatExpansionModule,
     MatListModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatSnackBarModule,
+    HttpClientModule
 
 
   ],
-  providers: [],
+  providers: [ 
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,8 +8,23 @@
   background-color:  rgb(247, 177, 177);
 }
 
+.titlecard {
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(124, 1, 1);
+}
+
+.descriptioncard {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  background-color: rgb(124, 1, 1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .cardbutton {
-  margin-left: 25%;
+  text-align: center;
 }
 
 .labelpromo{
@@ -53,13 +68,12 @@
   display: flex;
   align-items: center;
   margin: auto;
-  margin-top: 15px;
-  flex-direction: row;
+  margin-top: 20px;
   justify-content: center;
   align-content: center;
   background-color: rgb(247, 177, 177);
   border-radius: 18px;
-  max-width: 75%;
+  max-width: 85%;
 }
 
 .tabcota {
@@ -118,8 +132,10 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
   background-color: rgb(247, 177, 177);
+  height: 500px;
+  margin-top: 20px;
 }
 
 .cota-card {
@@ -128,8 +144,8 @@ td {
 }
 .cota-card2 {
   align-items: center;
-  height: 80%;
-  width: 80%;
+  height: 400px;
+  width: 85%;
 }
 .tabphotos {
   background-color: #000;
@@ -173,4 +189,16 @@ td {
  width: 20%;
  height: 45%;
  background-color:#fff;
+}
+.divReservas {
+  flex:1;
+  height: 100%;
+}
+
+.table {
+  width: 100%;
+}
+
+.thtable {
+  background-color: rgb(247, 177, 177);
 }

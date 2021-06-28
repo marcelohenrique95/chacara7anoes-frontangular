@@ -8,27 +8,27 @@
   <mat-tab label="Promoções" class="tab-home">
     <div class="tab">
       <mat-card class="example-card">
-        <mat-card-header>
+        <mat-card-header class="titlecard">
           <mat-card-title style="text-align: center;">NATAL 2021</mat-card-title>
         </mat-card-header>
         <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content>
+        <mat-card-content class="descriptioncard">
           <p>
-            Natal 3 Dias (24,25 e 26)
+            3 Dias (24,25 e 26)
           </p>
         </mat-card-content>
         <mat-card-actions class="cardbutton">
-          <button mat-raised-button color="warn" (click)="reserve()">RESERVAR AGORA</button>
+          <button mat-raised-button color="warn" (click)="openNotify()">RESERVAR AGORA</button>
         </mat-card-actions>
       </mat-card>
       <mat-card class="example-card">
-        <mat-card-header>
+        <mat-card-header class="titlecard">
           <mat-card-title>RÉVEILLON 2021</mat-card-title>
         </mat-card-header>
         <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content>
+        <mat-card-content class="descriptioncard">
           <p>
-            Reveillon 3 dias ( 31, 01 e 02)
+            3 dias ( 31, 01 e 02)
           </p>
         </mat-card-content>
         <mat-card-actions class="cardbutton">
@@ -36,13 +36,13 @@
         </mat-card-actions>
       </mat-card>
       <mat-card class="example-card">
-        <mat-card-header>
+        <mat-card-header class="titlecard">
           <mat-card-title>CARNAVAL 2022</mat-card-title>
         </mat-card-header>
         <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content>
+        <mat-card-content class="descriptioncard">
           <p>
-            Carnaval 3 dias ( 31, 01 e 02)
+            3 dias ( 31, 01 e 02)
           </p>
         </mat-card-content>
         <mat-card-actions class="cardbutton">
@@ -99,7 +99,7 @@
                 <mat-option value=1>08h as 20h</mat-option>
                 <mat-option value=2>18h as 06h</mat-option>
                 <mat-option value=3>12h as 00h</mat-option>
-                <mat-option *ngIf="inputDay == sabdom" value=4>2 dias</mat-option>
+                <mat-option value=4>2 dias</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
@@ -120,31 +120,31 @@
     <app-footer></app-footer>
   </mat-tab>
   <mat-tab label="Fotos" class="tabphotos">
-    <div class="divtab">
-      <div class="loren">
-        <img class="imag" src="./../assets/images/chac-night.jpg" />
-      </div>
-      <div class="loren">
-        <img class="imag" src="./../assets/images/chacara-piscina.jfif" />
-      </div>
-    </div>
     <app-footer></app-footer>
   </mat-tab>
-  <mat-tab label="Contato">
-    <mat-grid-list cols="2" rowHeight="1:1">
-      <mat-grid-tile>
-        <mat-label>@marcelohenrique95 GITHUB</mat-label>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-list>
-          <mat-list-item>Item 1</mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item>Item 2</mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item>Item 3</mat-list-item>
-        </mat-list>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <app-footer></app-footer>
+  <mat-tab label="Reservas">
+    <div class="divReservas">
+      <table mat-table [dataSource]="dataSource" class="table">
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef class="thtable"><strong>No.</strong></th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class="thtable"><strong>EVENTO</strong></th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef class="thtable"><strong>DATA</strong></th>
+          <td mat-cell *matCellDef="let element"> {{element.data}} </td>
+        </ng-container>
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef class="thtable"><strong>PREÇO</strong></th>
+          <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>      
+    </div>
+      <app-footer></app-footer>
   </mat-tab>
 </mat-tab-group>

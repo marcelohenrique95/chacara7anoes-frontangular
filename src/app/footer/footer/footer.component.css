@@ -1,5 +1,4 @@
 .footer {
-  margin: auto;
   width: 100%;
   bottom: 0;
   position: fixed;
@@ -9,5 +8,5 @@
 .textFooter {
   color: #fff;
   text-align: center;
-  margin: 15px;
+  margin: 13px;
 }
