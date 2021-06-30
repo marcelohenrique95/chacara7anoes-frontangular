@@ -7,48 +7,54 @@
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Promoções" class="tab-home">
     <div class="tab">
-      <mat-card class="example-card">
-        <mat-card-header class="titlecard">
-          <mat-card-title style="text-align: center;">NATAL 2021</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content class="descriptioncard">
-          <p>
-            3 Dias (24,25 e 26)
-          </p>
-        </mat-card-content>
-        <mat-card-actions class="cardbutton">
-          <button mat-raised-button color="warn" (click)="openNotify()">RESERVAR AGORA</button>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header class="titlecard">
-          <mat-card-title>RÉVEILLON 2021</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content class="descriptioncard">
-          <p>
-            3 dias ( 31, 01 e 02)
-          </p>
-        </mat-card-content>
-        <mat-card-actions class="cardbutton">
-          <button mat-raised-button color="warn">RESERVAR AGORA</button>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header class="titlecard">
-          <mat-card-title>CARNAVAL 2022</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
-        <mat-card-content class="descriptioncard">
-          <p>
-            3 dias ( 31, 01 e 02)
-          </p>
-        </mat-card-content>
-        <mat-card-actions class="cardbutton">
-          <button mat-raised-button color="warn">RESERVAR AGORA</button>
-        </mat-card-actions>
-      </mat-card>
+      <div class="div-card">
+        <mat-card class="example-card" class="mat-elevation-z7">
+          <mat-card-header class="titlecard">
+            <mat-card-title style="text-align: center;">NATAL 2021</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
+          <mat-card-content class="descriptioncard">
+            <p>
+              3 Dias (24,25 e 26)
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="cardbutton">
+            <button mat-raised-button color="warn" (click)="openNotify()">RESERVAR AGORA</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="div-card">
+        <mat-card class="mat-elevation-z7">
+          <mat-card-header class="titlecard">
+            <mat-card-title>RÉVEILLON 2021</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
+          <mat-card-content class="descriptioncard">
+            <p>
+              3 dias ( 31, 01 e 02)
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="cardbutton">
+            <button mat-raised-button color="warn">RESERVAR AGORA</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="div-card">
+        <mat-card class="mat-elevation-z7">
+          <mat-card-header class="titlecard">
+            <mat-card-title>CARNAVAL 2022</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/images/chacara-piscina.jfif" alt="Photo of a Shiba Inu">
+          <mat-card-content class="descriptioncard">
+            <p>
+              3 dias ( 31, 01 e 02)
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="cardbutton">
+            <button mat-raised-button color="warn">RESERVAR AGORA</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
     <app-footer></app-footer>
   </mat-tab>
@@ -143,8 +149,8 @@
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>      
+      </table>
     </div>
-      <app-footer></app-footer>
+    <app-footer></app-footer>
   </mat-tab>
 </mat-tab-group>

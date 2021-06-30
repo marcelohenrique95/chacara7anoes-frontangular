@@ -1,11 +1,17 @@
-.example-card {
-  max-width: 370px;
-  margin: 25px;
-  border-radius: 15px;
+.tab {
+  display: inline-flex;
+  background-color: rgb(247, 177, 177);
+}
+
+.div-card {
+  margin: 30px;
+  padding: 10px;
+  border-radius: 25px;
   align-items: center;
 }
 .tab-home{
   background-color:  rgb(247, 177, 177);
+  margin: 0 auto;
 }
 
 .titlecard {
@@ -63,17 +69,6 @@
 .select {
   border-radius: 55px;
 
-}
-.tab {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-top: 20px;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(247, 177, 177);
-  border-radius: 18px;
-  max-width: 85%;
 }
 
 .tabcota {
@@ -134,8 +129,7 @@ td {
   align-items: center;
   padding: 10px;
   background-color: rgb(247, 177, 177);
-  height: 500px;
-  margin-top: 20px;
+  height: 470px;
 }
 
 .cota-card {
